@@ -2,18 +2,25 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
+        <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:7.0-alpine</ContainerBaseImage>
+        <ContainerImageName>user-microservice</ContainerImageName>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
         <PackageReference Include="Jaeger" Version="1.0.3" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.NET.Build.Containers" Version="0.2.7" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0" />
         <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.9.0" />
+        <PackageReference Include="Prometheus.Client.AspNetCore" Version="4.8.0" />
+        <PackageReference Include="Prometheus.Client.HttpRequestDurations" Version="3.6.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     </ItemGroup>
-
+<PropertyGroup>
+</PropertyGroup>
 </Project>
